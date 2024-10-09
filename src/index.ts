@@ -1,3 +1,7 @@
+const dividedNumbersLeaveNoRest = (numberToDivide: number, numberToDivideWith: number) => {
+    return numberToDivide % numberToDivideWith === 0;
+};
+
 export const fizzBuzz = (fizzArray: (number | string)[] ) => {
     if (fizzArray.length === 0) console.log("please provide a number. cant be an empty array");
     fizzArray.forEach(element => {
@@ -7,12 +11,15 @@ export const fizzBuzz = (fizzArray: (number | string)[] ) => {
 
         if (typeof element === "number" && element > 100) console.log("Please provide a number below 100");
 
-        if (typeof element === "number" && element % 15 === 0) console.log("FizzBuzz");
+        if (typeof element === "number" && element <= 100 && element > 0 && !dividedNumbersLeaveNoRest(element, 3) && !dividedNumbersLeaveNoRest(element, 5) && !dividedNumbersLeaveNoRest(element, 15)) console.log(`${element}`);
 
-        if (typeof element === "number" && element % 3 === 0 && element % 15 !== 0) console.log("Fizz");
+        if (typeof element === "number" && dividedNumbersLeaveNoRest(element, 15) && element <= 100) console.log("FizzBuzz");
 
-        if (typeof element === "number" && element % 5 === 0 && element % 15 !== 0) console.log("Buzz");
+        if (typeof element === "number" && dividedNumbersLeaveNoRest(element, 3) && !dividedNumbersLeaveNoRest(element, 15) && element <= 100) console.log("Fizz");
+
+        if (typeof element === "number" && dividedNumbersLeaveNoRest(element, 5) && !dividedNumbersLeaveNoRest(element, 15) && element <= 100) console.log("Buzz");
     });
 };
 
-fizzBuzz([3000000]);
+//fizzBuzz([3, 5, 15, 5, 7, 'b', 3]);
+fizzBuzz([-2]);

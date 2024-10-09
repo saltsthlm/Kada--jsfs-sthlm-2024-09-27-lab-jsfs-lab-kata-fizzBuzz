@@ -17,16 +17,6 @@ test("should log empty array",() => {
     deepEqual(output, "please provide a number. cant be an empty array");
 });
 
-test.skip("Should log number 1 from array",() => {
-    let output = "";
-    console.log = (msg) => { 
-        output = msg;
-    };
-
-    fizzBuzz([]);
-    deepEqual(output, "1");
-});
-
 test("Should provide a number.",() => {
     let output = "";
     console.log = (msg) => { 
