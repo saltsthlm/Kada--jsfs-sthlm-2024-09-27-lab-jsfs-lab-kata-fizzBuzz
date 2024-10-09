@@ -3,6 +3,7 @@
 ## Kata FizzBuzz
 
 #### What you will be working on
+
 Today you will be solving the classic FizzBuzz kata. By the end of the lab we want you to:
 
 - Have gained even better understanding of Node.js.
@@ -16,7 +17,6 @@ Set up the project to use ESLint with the recommended lint config. You can find 
 #### Testing
 
 Set up the project to use the _Jest_ as test runner. You can find the instructions on how to we recommend using it [here](https://github.com/appliedtechnology/jsfs-lab-testingDemo).
-
 
 ### Lab instructions
 
@@ -97,6 +97,7 @@ Bogus ... "Please provide a number. Try again"
 ```
 
 #### Done? Challenge yourselves
+
 Here are some additional conditions we can add to our FizzBuzz application.
 
 - A number is fizz if it is divisible by 3 or if it has a 3 in it. For example, `33`, `13` both say `Fizz`
