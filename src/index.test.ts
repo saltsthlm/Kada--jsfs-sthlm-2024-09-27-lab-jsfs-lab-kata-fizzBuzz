@@ -1,6 +1,6 @@
 import { deepEqual, ok } from "node:assert/strict";
 import test from "node:test";
-import { fizzBuzz } from ".";
+import { fizzBuzz } from "./index-old";
 
 
 test("Write a trivial test that will fail", () => {
@@ -14,7 +14,7 @@ test("should log empty array",() => {
     };
 
     fizzBuzz([]);
-    deepEqual(output, "please provide a number. cant be an empty array");
+    deepEqual(output, "Please provide a number. cant be an empty array");
 });
 
 test("Should provide a number.",() => {

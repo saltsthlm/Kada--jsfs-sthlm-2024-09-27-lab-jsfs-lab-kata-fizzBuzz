@@ -1,25 +1,26 @@
-const dividedNumbersLeaveNoRest = (numberToDivide: number, numberToDivideWith: number) => {
-    return numberToDivide % numberToDivideWith === 0;
-};
 
-export const fizzBuzz = (fizzArray: (number | string)[] ) => {
-    if (fizzArray.length === 0) console.log("please provide a number. cant be an empty array");
-    fizzArray.forEach(element => {
-        if (typeof element !== "number") console.log("Please provide a number. Try again");
+
+export const fizzBuzz = (fizzArray : (number | string)[]) => {
+    if (fizzArray.length === 0) return "Please provide a number. Can't be an empty array";
+
+    return fizzArray.map(element => {
+        if (typeof element !== "number") return "Please provide a number. Try again";
         
-        if (typeof element === "number" && element < 0) console.log("Please provide a positive number. Try again");
+        if (element < 0) return "Please provide a positive number. Try again";
+        
+        if (element > 100) return "Please provide a number below 100";
+                
+        if (element % 15 === 0) return "FizzBuzz";
+        
+        if (element % 3 === 0) return "Fizz";
 
-        if (typeof element === "number" && element > 100) console.log("Please provide a number below 100");
-
-        if (typeof element === "number" && element <= 100 && element > 0 && !dividedNumbersLeaveNoRest(element, 3) && !dividedNumbersLeaveNoRest(element, 5) && !dividedNumbersLeaveNoRest(element, 15)) console.log(`${element}`);
-
-        if (typeof element === "number" && dividedNumbersLeaveNoRest(element, 15) && element <= 100) console.log("FizzBuzz");
-
-        if (typeof element === "number" && dividedNumbersLeaveNoRest(element, 3) && !dividedNumbersLeaveNoRest(element, 15) && element <= 100) console.log("Fizz");
-
-        if (typeof element === "number" && dividedNumbersLeaveNoRest(element, 5) && !dividedNumbersLeaveNoRest(element, 15) && element <= 100) console.log("Buzz");
+        if (element % 5 === 0) return "Buzz";
+        
+        return element;
     });
 };
+//fizzBuzz([]);
+console.log(fizzBuzz([1, 'banan', 3, 15, 5 , 101, -2, 7]));
 
-//fizzBuzz([3, 5, 15, 5, 7, 'b', 3]);
-fizzBuzz([-2]);
+
+
