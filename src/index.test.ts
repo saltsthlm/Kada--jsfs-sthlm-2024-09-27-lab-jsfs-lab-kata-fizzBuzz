@@ -58,3 +58,34 @@ test("Should provide a number below 100.",() => {
     deepEqual(output, "Please provide a number below 100");
 });
 
+
+test("Should provide FizzBuzz.",() => {
+    let output = "";
+    console.log = (msg) => { 
+        output = msg;
+    };
+
+    fizzBuzz([90]);
+    deepEqual(output, "FizzBuzz");
+});
+
+test("Should provide Fizz.",() => {
+    let output = "";
+    console.log = (msg) => { 
+        output = msg;
+    };
+
+    fizzBuzz([21]);
+    deepEqual(output, "Fizz");
+});
+
+test("Should provide Buzz.",() => {
+    let output = "";
+    console.log = (msg) => { 
+        output = msg;
+    };
+
+    fizzBuzz([55]);
+    deepEqual(output, "Buzz");
+});
+
