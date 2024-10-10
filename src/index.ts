@@ -19,5 +19,8 @@ export const fizzBuzz = (fizzArray: (number | string)[]) => {
     return element;
   });
 };
-//fizzBuzz([]);
-console.log(fizzBuzz([1, "banan", 3, 15, 5, 101, -2, 7]));
+
+const fizzBuzzed = fizzBuzz([1, "banan", 3, 15, 5, 101, -2, 7]);
+
+console.log(fizzBuzz([]));
+console.log(fizzBuzzed);
